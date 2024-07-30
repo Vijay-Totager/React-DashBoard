@@ -1,0 +1,99 @@
+{  "multi":{
+    "complex":[
+      {
+        "name": "Horizon UI PRO",
+      
+        "status": "Approved",
+        "date": "12 Jan 2021",
+        "progress": 75.5
+      },
+      {
+        "name": "Horizon UI Free",
+     
+        "status": "Disable",
+        "date": "21 Feb 2021",
+        "progress": 25.5
+      },
+      {
+        "name": "Horizon UI Free",
+     
+        "status": "Disable",
+        "date": "21 Feb 2021",
+        "progress": 25.5
+      },{
+        "name": "Horizon UI Free",
+     
+        "status": "Disable",
+        "date": "21 Feb 2021",
+        "progress": 25.5
+      }
+    ],
+    "totalspent":[
+        {
+            "name": "Revenue",
+            "data": [ 50, 64, 48, 66, 49, 68 ]
+        },
+        {
+           " name": "Profit",
+            "data": [ 30, 40, 24, 46, 20, 46 ]
+        }
+    ],
+    "Weekly":[
+        {
+            "name": "PRODUCT A",
+            "data": [ 400, 370, 330, 390, 320, 350, 360, 320, 380 ]
+        },
+        {
+            "name": "PRODUCT B",
+            "data": [ 400, 370, 330, 390, 320, 350, 360, 320, 380 ]
+        },
+        {
+            "name": "PRODUCT C",
+            "data": [ 400, 370, 330, 390, 320, 350, 360, 320, 380 ]
+        }
+    ],
+    "check":[
+        {
+            "name": ["Horizon UI PRO", true],
+            "quantity": 2458,
+            "progress": "17.5%",
+            "date": "12 Jan 2021",
+            "info": true
+          },
+          {
+            "name": ["Horizon UI Free", true],
+            "quantity": 1485,
+            "progress": "10.8%",
+            "date": "21 Feb 2021",
+            "info": true
+          },
+          {
+            "name": ["Weekly Update", true],
+            "quantity": 1024,
+            "progress": "21.3%",
+            "date": "13 Mar 2021",
+            "info": true
+          },
+          {
+            "name": ["Venus 3D Asset", true],
+            "quantity": 858,
+            "progress": "31.5%",
+            "date": "24 Jan 2021",
+            "info": true
+          },
+          {
+            "name": ["Marketplace", true],
+            "quantity": 258,
+            "progress": "12.2%",
+            "date": "24 Oct 2022",
+            "info": true
+          }
+    ],
+    "daily":[
+        {
+            "name": "Daily Traffic",
+            "data": [ 20, 30, 40, 20, 45, 50, 30 ]
+        }
+    ]}
+  }
+  
