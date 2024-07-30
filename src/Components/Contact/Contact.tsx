@@ -7,7 +7,6 @@ import { Title } from "./Contact.styles";
 
 import { useTheme } from 'Components/theme/themeContext';
 
-
 const validationSchema = Yup.object({
     fullName: Yup.string()
         .min(2, 'Too Short!')
@@ -37,7 +36,6 @@ const Contact = () => {
         validationSchema: validationSchema,
         onSubmit: (values) => {
             console.log(values);
-          
         },
     });
 
@@ -45,7 +43,6 @@ const Contact = () => {
         <>
             <Helmet>
                 <title>Contact</title>
-              
             </Helmet>
 
             <Stack>
@@ -62,7 +59,6 @@ const Contact = () => {
                         pb: 10,
                         mt: -12,
                         backgroundColor: theme.palette.background.default,
-                    
                     }}
                 >
                     <Grid container m={5}>
@@ -80,7 +76,6 @@ const Contact = () => {
                                         <Typography
                                             sx={{
                                                 color: theme.palette.primary.main,
-                                            
                                                 fontSize: { xs: "25px", md: "33px" },
                                                 fontWeight: "bold",
                                                 textTransform: "capitalize",
@@ -106,7 +101,6 @@ const Contact = () => {
                                         <Typography
                                             sx={{
                                                 color: theme.palette.text.primary,
-                                           
                                                 fontWeight: "bold",
                                                 textTransform: "capitalize",
                                                 textAlign: { xs: 'center', md: 'left' },
@@ -116,7 +110,7 @@ const Contact = () => {
                                         >
                                             EMAIL
                                         </Typography>
-                                        <a href="mailto:info@abc.com" target="_blank" style={{ textDecoration: 'none' }}>
+                                        <a href="mailto:info@abc.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                                             <Typography
                                                 sx={{
                                                     color: theme.palette.text.primary,
@@ -133,7 +127,6 @@ const Contact = () => {
                                         <Typography
                                             sx={{
                                                 color: theme.palette.text.primary,
-                                         
                                                 fontWeight: "bold",
                                                 textTransform: "capitalize",
                                                 textAlign: { xs: 'center', md: 'left' },
@@ -143,7 +136,7 @@ const Contact = () => {
                                         >
                                             PHONE NUMBER
                                         </Typography>
-                                        <a href="tel:9945753240" target="_blank" style={{ textDecoration: 'none' }}>
+                                        <a href="tel:9945753240" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                                             <Typography
                                                 sx={{
                                                     color: theme.palette.text.primary,
@@ -173,7 +166,6 @@ const Contact = () => {
                                             <Typography
                                                 sx={{
                                                     color: theme.palette.primary.light,
-                                                   
                                                     fontSize: { xs: "25px", md: "33px" },
                                                     fontWeight: "bold",
                                                     textTransform: "capitalize",
@@ -194,7 +186,7 @@ const Contact = () => {
                                                 error={formik.touched.fullName && Boolean(formik.errors.fullName)}
                                                 helperText={formik.touched.fullName && formik.errors.fullName}
                                                 InputLabelProps={{
-                                                    sx: {  fontSize: { xs: "13px", md: "18px" } },
+                                                    sx: { fontSize: { xs: "13px", md: "18px" } },
                                                 }}
                                             />
                                             
@@ -210,7 +202,7 @@ const Contact = () => {
                                                 error={formik.touched.email && Boolean(formik.errors.email)}
                                                 helperText={formik.touched.email && formik.errors.email}
                                                 InputLabelProps={{
-                                                    sx: {  fontSize: { xs: "13px", md: "18px" } },
+                                                    sx: { fontSize: { xs: "13px", md: "18px" } },
                                                 }}
                                             />
                                             
@@ -226,7 +218,7 @@ const Contact = () => {
                                                 error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
                                                 helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
                                                 InputLabelProps={{
-                                                    sx: {  fontSize: { xs: "13px", md: "18px" } },
+                                                    sx: { fontSize: { xs: "13px", md: "18px" } },
                                                 }}
                                             />
                                             
@@ -252,7 +244,6 @@ const Contact = () => {
                                                 type="submit"
                                                 variant="contained"
                                                 sx={{
-                                               
                                                     textTransform: 'capitalize',
                                                     backgroundColor: theme.palette.primary.main,
                                                     borderRadius: '5px',
