@@ -13,42 +13,6 @@ import { useTheme as useMuiTheme } from '@mui/material/styles';
 
 
 
-<<<<<<< HEAD
-=======
-const pages: Page[] = [
-    { label: 'Home', value: 'Home', dropdown: false, navigate: '/home' },
-  {
-    label: 'I Can',
-    value: 'I Can',
-    dropdown: true,
-    submenu: [
-      { label: 'Navigate Dashboard', value: ' Dashboard', navigate: '/dashboard' },
-      { label: 'Manage Members', value: 'Members', navigate: '/members' },
-      { label: 'Manage Posts', value: 'Posts', navigate: '/post' },
-      { label: 'Manage Payments', value: 'Payments', navigate: '/payments' },
-      { label: 'Manage Subscriptions', value: 'Subscriptions', navigate: '/subscription' },
-      { label: 'Manage Communities', value: 'Community', navigate: '/communities' },
-    
-     
-    ],
-    navigate: '/features1',
-  },
-  {
-    label: 'I am',
-    value: 'I am',
-    dropdown: true,
-    submenu: [
-      { label: 'An Entrepreneur', value: 'An Entrepreneur', navigate: '/business' },
-      { label: 'A Homemaker', value: 'A Homemaker', navigate: '/entrepreneur' },
-      { label: 'A Teacher', value: 'A Teacher', navigate: '/home' },
-      { label: 'A Wellness/Health Instructor', value: 'A Wellness/Health Instructor', navigate: '/wellness' },
-    ],
-    navigate: '',
-  },
-  { label: 'Pricing', value: 'Pricing', dropdown: false, navigate: '/pricing' },
-  { label: 'About Us', value: 'About Us', dropdown: false, navigate: '/about' },
-];
->>>>>>> parent of b7c483b (updates)
 
 const Header = () => {
 
