@@ -8,61 +8,29 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import {
-
-<<<<<<< HEAD
-  Stack,
-  useTheme,
-  
-} from "@mui/material";
+import { Stack, useTheme } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 
 import ContactIcon from "@mui/icons-material/Contacts";
 
 import ClearIcon from "@mui/icons-material/Clear";
 
-
-
 const menuItems = [
-  { label: ' Main Dashboard', value: 'Main Dashboard', dropdown: false, navigate: '/home', icon: <HomeIcon /> },
-  
+  {
+    label: " Main Dashboard",
+    value: "Main Dashboard",
+    dropdown: false,
+    navigate: "/home",
+    icon: <HomeIcon />,
+  },
 
-  { label: 'Contact Us', value: 'Contact Us', dropdown: false, navigate: '/contacts', icon: <ContactIcon /> },
-=======
-// ];
-const menuItems: menuItems[] = [
-  { label: 'Home', value: 'Home', dropdown: false, navigate: '/home' },
   {
-    label: 'I Can',
-    value: 'I Can',
-    dropdown: true,
-    submenu: [
-        { label: 'Navigate Dashboard', value: ' Dashboard', navigate: '/dashboard' },
-      { label: 'Manage Members', value: 'Members', navigate: '/members' },
-      { label: 'Manage Posts', value: 'Posts', navigate: '/post' },
-      { label: 'Manage Payments', value: 'Payments', navigate: '/payments' },
-      { label: 'Manage Subscriptions', value: 'Subscriptions', navigate: '/subscription' },
-      { label: 'Manage Communities', value: 'Community', navigate: '/communities' },
-    
-     
-    ],
-    navigate: '/features1',
+    label: "Contact Us",
+    value: "Contact Us",
+    dropdown: false,
+    navigate: "/contacts",
+    icon: <ContactIcon />,
   },
-  {
-    label: 'I am',
-    value: 'I am',
-    dropdown: true,
-    submenu: [
-      { label: 'An Entrepreneur', value: 'An Entrepreneur', navigate: '/entrepreneur' },
-      { label: 'A Homemaker', value: 'A Homemaker', navigate: '/home' },
-      { label: 'A Teacher', value: 'A Teacher', navigate: '/home' },
-      { label: 'A Wellness/Health Instructor', value: 'A Wellness/Health Instructor', navigate: '/wellness' },
-    ],
-    navigate: '',
-  },
-  { label: 'Pricing', value: 'Pricing', dropdown: false, navigate: '/pricing' },
-  { label: 'About Us', value: 'About Us', dropdown: false, navigate: '/about' },
->>>>>>> parent of b7c483b (updates)
 ];
 
 type Anchor = "top" | "left" | "bottom" | "right";
@@ -70,7 +38,7 @@ type Anchor = "top" | "left" | "bottom" | "right";
 export default function MobileSideBar() {
   const theme = useTheme();
   const [state, setState] = React.useState({
-    left: false
+    left: false,
   });
 
   const [selectedPages, setSelectedPages] = React.useState<{
@@ -78,26 +46,34 @@ export default function MobileSideBar() {
   }>({});
   const navigate = useNavigate();
 
-;
- const handlePageChange = (value: string, navigateTo: string,anchor: Anchor) => {
+  const handlePageChange = (
+    value: string,
+    navigateTo: string,
+    anchor: Anchor
+  ) => {
     setSelectedItem(value);
     navigate(navigateTo);
-
-  
   };
- 
-
- 
-
 
   const [selectedItem, setSelectedItem] = React.useState<string | null>(null);
 
-
   // Define colors based on the theme mode
-  const selectedColor = theme.palette.mode === 'light' ? theme.palette.primary.main : theme.palette.secondary.main;
-  const notSelectedColor = theme.palette.mode === 'light' ? theme.palette.text.primary : theme.palette.text.secondary;
-  const selectedBgColor = theme.palette.mode === 'light' ? theme.palette.action.selected : theme.palette.action.selected;
-  const notSelectedBgColor = theme.palette.mode === 'light' ? theme.palette.background.paper : theme.palette.background.paper;
+  const selectedColor =
+    theme.palette.mode === "light"
+      ? theme.palette.primary.main
+      : theme.palette.secondary.main;
+  const notSelectedColor =
+    theme.palette.mode === "light"
+      ? theme.palette.text.primary
+      : theme.palette.text.secondary;
+  const selectedBgColor =
+    theme.palette.mode === "light"
+      ? theme.palette.action.selected
+      : theme.palette.action.selected;
+  const notSelectedBgColor =
+    theme.palette.mode === "light"
+      ? theme.palette.background.paper
+      : theme.palette.background.paper;
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -148,20 +124,31 @@ export default function MobileSideBar() {
               <ListItemButton
                 component={Link}
                 to={page.navigate}
-                
                 onClick={toggleDrawer(anchor, false)}
                 selected={selectedItem === page.value}
                 sx={{
-                  backgroundColor: selectedItem === page.value ? selectedBgColor : notSelectedBgColor,
-                  color: selectedItem === page.value ? selectedColor : notSelectedColor,
-                  '&:hover': {
+                  backgroundColor:
+                    selectedItem === page.value
+                      ? selectedBgColor
+                      : notSelectedBgColor,
+                  color:
+                    selectedItem === page.value
+                      ? selectedColor
+                      : notSelectedColor,
+                  "&:hover": {
                     backgroundColor: theme.palette.action.hover,
                   },
-                  '& .MuiIconButton-root': {
-                    color: selectedItem === page.value ? selectedColor : notSelectedColor,
+                  "& .MuiIconButton-root": {
+                    color:
+                      selectedItem === page.value
+                        ? selectedColor
+                        : notSelectedColor,
                   },
-                  '& .MuiListItemText-root .MuiTypography-root': {
-                    color: selectedItem === page.value ? selectedColor : notSelectedColor,
+                  "& .MuiListItemText-root .MuiTypography-root": {
+                    color:
+                      selectedItem === page.value
+                        ? selectedColor
+                        : notSelectedColor,
                     fontWeight: selectedItem === page.value ? 700 : 500,
                   },
                 }}
@@ -179,19 +166,16 @@ export default function MobileSideBar() {
                       fontWeight: 500,
                       fontFamily: "DM Sans",
                     },
-                  }} onClick={() => {handlePageChange(page.value, page.navigate,"left")}}
+                  }}
+                  onClick={() => {
+                    handlePageChange(page.value, page.navigate, "left");
+                  }}
                 />
               </ListItemButton>
             </ListItem>
           </React.Fragment>
         ))}
       </List>
-    
-    
- 
-     
-
-    
     </Box>
   );
 
