@@ -37,7 +37,6 @@ const App = () => {
                 <Route path="/home" element={<Home />} />
                
 
-<<<<<<< HEAD
                 <Route path="/contacts" element={<Contact />} />
               </Route>
             </Routes>
@@ -45,39 +44,6 @@ const App = () => {
         </ErrorBoundary>
       </Router>
     </ThemeProvider>
-=======
-      <ThemeProvider theme={theme}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" replace={true} />} />
-            <Route path="/" element={<Layout />}>
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/contacts" element={<Contact />} />
-              <Route path="/features" element={<MembersList />} />
-              <Route path="/usecases" element={<Brand />} />
-              <Route path="/business" element={<Business />} />
-              <Route path="/wellness" element={<Wellness />} />
-              <Route path="/lifestyle" element={<Artist />} />
-              <Route path="/entrepreneur" element={<Homemaker />} />
-              <Route path="/brand" element={<Brand />} />
-              <Route path="/members" element={<MembersList />} />
-              <Route path="/payments" element={<Payments />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/communities" element={<Communitylist />} />
-              <Route path="/subscription" element={<Plans />} />
-              <Route path="/post" element={<Post />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-uses" element={<TermsAndCondition />} />
-              <Route path="/refund-policy" element={<RefundPolicy />} />
-            </Route>
-          </Routes>
-        </Router>
-      </ThemeProvider>
-
-    </>
->>>>>>> parent of b7c483b (updates)
   );
 };
 
