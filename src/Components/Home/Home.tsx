@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "Components/store/store";
 import axios from "axios";
 import { setData, setError, setLoading } from "Components/store/tableSlice";
+import tableDataComplex from "Components/ReUsableComponents/tableDataComplex";
 
 const Home = () => {
   useEffect(() => {
@@ -225,7 +226,7 @@ const Home = () => {
           <PaiChart />
         </Grid>
         <Grid item xl={6} lg={6} md={6} xs={12}>
-          <ProgressTable tableData={complex} />
+          <ProgressTable tableData={tableDataComplex} />
         </Grid>
         <Grid item xl={3} md={3} lg={3} xs={12}>
           <TaskTable />

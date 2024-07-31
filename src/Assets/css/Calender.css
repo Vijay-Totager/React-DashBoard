@@ -17,16 +17,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: unset !important;
 }
-.react-calendar__navigation__prev-button,
-.react-calendar__navigation__next-button {
-  background-color: #3f51b5 !important; /* Primary color */
-  border-radius: 10px;
-  min-width: 34px !important;
-  height: 34px !important;
-  color: white;
-  /* Remove hover and focus effects */
-  transition: none !important;
-}
+
 .react-calendar__navigation__label {
   font-weight: 700 !important;
   font-size: 18px;
@@ -46,7 +37,7 @@ abbr[title] {
   color: #050505; /* Light mode date color */
 }
 .react-calendar__month-view__weekdays {
-  background-color: #f4f7fe;
+  background-color: #456dc8;
   border-radius: 10px;
   margin-bottom: 6px;
 }

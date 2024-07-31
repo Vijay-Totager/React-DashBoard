@@ -63,7 +63,7 @@ export default function Conversion(props: { [x: string]: any }) {
                 </ListItemIcon>
                 <ListItemText
                   primary={
-                    <Typography fontWeight="bold" color={textColor} variant="body1">
+                    <Typography fontWeight="bold" color={textColor} variant="body1" sx={{fontSize:'14px'}}>
                       {task.label}
                     </Typography>
                   }

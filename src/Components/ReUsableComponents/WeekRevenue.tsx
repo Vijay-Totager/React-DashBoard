@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Card, CardContent, Typography, useTheme } from '@mui/material';
 import BarChart from '../charts/BarChart';
-import { barChartOptionsConsumption } from './charts';
+import { barChartDataConsumption, barChartOptionsConsumption } from './charts';
 import { useSelector } from 'react-redux';
 import { RootState } from 'Components/store/store';
 
@@ -26,7 +26,7 @@ export default function WeeklyRevenue(props: { [x: string]: any }) {
       
       </CardContent>
       <CardContent style={{ height: '185px', marginTop: 'auto', width: '100%' }}>
-        <BarChart chartData={Weekly} chartOptions={barChartOptionsConsumption} />
+        <BarChart chartData={barChartDataConsumption} chartOptions={barChartOptionsConsumption} />
       </CardContent>
     </Card>
   );

@@ -148,7 +148,7 @@ export default function CheckTable(props: { tableData: any }) {
             {table.getRowModel().rows.slice(0, 5).map((row: any) => (
               <TableRow key={row.id}>
                 {row.getVisibleCells().map((cell: any) => (
-                  <TableCell key={cell.id} sx={{ fontSize: '10px', padding: '4px', maxWidth: '60px', maxHeight: '30px', borderColor: 'transparent' }}>
+                  <TableCell key={cell.id} sx={{ fontSize: '10', padding: '4px', maxWidth: '60px', maxHeight: '30px', borderColor: 'transparent' }}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}

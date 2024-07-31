@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Button, Card, CardContent, Typography,  useTheme } from '@mui/material';
 import LineChart from '../charts/LineChart';
-import {  lineChartOptionsTotalSpent } from './charts';
+import {  lineChartDataTotalSpent, lineChartOptionsTotalSpent } from './charts';
 import { useSelector } from 'react-redux';
 import { RootState } from 'Components/store/store';
 
 export default function TotalSpent(props: { [x: string]: any }) {
   const { ...rest } = props;
   const theme = useTheme();
-  const { data} = useSelector((state: RootState) => state.table);
+  const { data } = useSelector((state: RootState) => state.table);
   const {  totalspent = [] }:any = data || {};
   const textColor = theme.palette.mode === 'light' ? theme.palette.text.primary : 'white';
   const textColorSecondary = theme.palette.mode === 'light' ? theme.palette.text.secondary : 'white';
@@ -47,7 +47,7 @@ export default function TotalSpent(props: { [x: string]: any }) {
           </Box>
         </Box>
         <Box style={{ minHeight: '150px', minWidth: '60%', marginTop: 'auto' }}>
-          <LineChart chartData={totalspent} chartOptions={lineChartOptionsTotalSpent} />
+          <LineChart chartData={lineChartDataTotalSpent} chartOptions={lineChartOptionsTotalSpent} />
         </Box>
       </CardContent>
     </Card>

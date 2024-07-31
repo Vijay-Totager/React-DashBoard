@@ -41,7 +41,11 @@ export default function MiniCalendar(props: {
         
         tileContent={<Typography color="primary" />}
         prevLabel={
-          <IconButton>
+          <IconButton   sx={{
+            '&:hover': {
+              backgroundColor: 'none',
+            },
+          }}>
             < ChevronLeftIcon  />
           </IconButton>
         }

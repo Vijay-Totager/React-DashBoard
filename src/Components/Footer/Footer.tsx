@@ -1,43 +1,49 @@
-import { Twitter } from "@mui/icons-material";
-import { Box, Button, Divider, Grid, IconButton, Paper, Stack, Typography } from "@mui/material";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Link } from 'react-router-dom';
+import { Box, Stack, Typography } from "@mui/material";
+
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Footer = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleButtonClick = () => {
-        navigate('/contacts');
-    };
+  const handleButtonClick = () => {
+    navigate("/contacts");
+  };
 
   return (
     <>
-
-      <Box sx={{ backgroundColor: "#f2f2f2f2", pt: { xs: 3, md: 0 } }}>
+      <Box sx={{ backgroundColor: "#f2f2f2f2", p: 2 }}>
         <Stack
-          display={"flex"}
-          alignContent={"space-evenly"}
-          flexDirection={"row"}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+          direction={"row"}
         >
-          <Typography
-            sx={{
-              ml: 5,
-              mb: 2,
-              fontFamily: "Montserrat",
-              fontSize: { xs: "10px", md: "14px" },
-              textAlign: "center",
-            }}
+          <Stack
+            display={"flex"}
+            alignItems={"end"}
+            flexDirection={"row"}
+            justifyContent={"space-around"}
           >
-            © 2024 Abc. All Rights Reserved
-          </Typography>
+            <Typography
+              sx={{
+                ml: 5,
+
+                fontFamily: "Montserrat",
+                fontSize: { xs: "10px", md: "14px" },
+                textAlign: "center",
+              }}
+            >
+              © 2024 Abc. All Rights Reserved
+            </Typography>
+          </Stack>
+          <Stack direction={"row"} spacing={10}>
+            <Link to="/">{"Support"}</Link>
+            <Link to="/">{"License"}</Link>
+            <Link to="/">{"Blog"}</Link>
+          </Stack>
         </Stack>
       </Box>
     </>
