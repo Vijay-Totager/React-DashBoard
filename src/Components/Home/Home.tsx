@@ -30,7 +30,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleResize = () => {
-       window.location.reload();
+      //  window.location.reload();
     };
 
     window.addEventListener("resize", handleResize);
