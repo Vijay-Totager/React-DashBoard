@@ -10,7 +10,7 @@ export const Layout = () => {
     <Grid container>
       <Grid
         item
-        xl={2}
+        xl={2} md={2} lg={2} 
         sx={{
           position: "fixed",
           height: "100vh",

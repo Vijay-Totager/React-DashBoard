@@ -73,7 +73,7 @@ export default function Conversion(props: { [x: string]: any }) {
                     </Typography>
                   }
                 />
-                <IconButton edge="end" sx={{ ml: 1 }}>
+                <IconButton edge="end" sx={{ mr: 0 }}>
                   <DragIndicatorIcon />
                 </IconButton>
               </ListItem>

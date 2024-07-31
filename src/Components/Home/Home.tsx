@@ -28,19 +28,10 @@ const Home = () => {
 
  
 
-  useEffect(() => {
-    const handleResize = () => {
-      //  window.location.reload();
-    };
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   const dispatch = useDispatch<AppDispatch>();
 
-  const { data, loading, error } = useSelector(
+  const { data } = useSelector(
     (state: RootState) => state.table
   );
   const { complex = [], check = [], daily = [] }: any = data || {};

@@ -35,7 +35,12 @@ const Contact = () => {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            console.log(values);
+            alert(`
+                Full Name: ${values.fullName}
+                Email: ${values.email}
+                Phone Number: ${values.phoneNumber}
+                Comments: ${values.comments}
+            `);
         },
     });
 
