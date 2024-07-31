@@ -34,7 +34,7 @@ abbr[title] {
   justify-content: center;
   padding: 0px !important;
   height: 34px !important;
-  color: #050505; /* Light mode date color */
+  color: #000000; /* Light mode date color */
 }
 .react-calendar__month-view__weekdays {
   background-color: #456dc8;
@@ -93,7 +93,7 @@ body.dark .react-calendar__navigation__next-button {
   transition: none !important;
 }
 body.dark .react-calendar__tile {
-  color: #e0e0e0; /* Darker text color for dates */
+  color: #ece4e4; /* Darker text color for dates */
 }
 body.dark .react-calendar__tile:enabled:hover,
 body.dark .react-calendar__tile:enabled:focus {

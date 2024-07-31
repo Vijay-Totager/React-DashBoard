@@ -11,7 +11,7 @@ export default function StatCard(props: {
 }) {
   const { startContent, endContent, name, growth, value } = props;
   const theme = useTheme();
-  const textColor ="#1b254b";
+  const textColor ="black";
   const textColorSecondary = "#a3aed0";
 
   return (

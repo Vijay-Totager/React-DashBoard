@@ -35,7 +35,7 @@ const Home = () => {
     (state: RootState) => state.table
   );
   const { complex = [], check = [], daily = [] }: any = data || {};
-  console.log(daily);
+
   useEffect(() => {
     const fetchData = async () => {
       dispatch(setLoading(true));
@@ -52,9 +52,8 @@ const Home = () => {
     fetchData();
   }, [dispatch]);
 
-  // if (loading) return <div>Loading...</div>;
-  // if (error) return <div>Error: {error}</div>;
-  console.log(data);
+
+ 
   return (
     <>
       <Helmet>

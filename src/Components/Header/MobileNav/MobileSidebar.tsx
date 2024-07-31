@@ -120,7 +120,11 @@ export default function MobileSideBar() {
       <List>
         {menuItems.map((page) => (
           <React.Fragment key={page.value}>
-            <ListItem disablePadding sx={{ fontSize: "20px" }}>
+            <ListItem
+              disablePadding
+              sx={{ fontSize: "20px" }}
+              onClick={toggleDrawer(anchor, false)}
+            >
               <ListItemButton
                 component={Link}
                 to={page.navigate}
@@ -187,7 +191,7 @@ export default function MobileSideBar() {
             onClick={toggleDrawer(anchor, true)}
             sx={{
               backgroundColor: "white",
-             ml:{xs:5,md:15},
+              ml: { xs: 5, md: 15 },
               borderRadius: "30px",
               border: "1px solid #515151 ",
             }}
