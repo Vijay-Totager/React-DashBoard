@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProviderComponent } from './Components/theme/themeContext';
 import { Provider } from 'react-redux';
-import store from './Components/store/store'; // Adjust the import path as needed
+import store from './Components/store/store'; 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

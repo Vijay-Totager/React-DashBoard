@@ -20,6 +20,7 @@ import { AppDispatch, RootState } from "Components/store/store";
 import axios from "axios";
 import { setData, setError, setLoading } from "Components/store/tableSlice";
 import tableDataComplex from "Components/ReUsableComponents/tableDataComplex";
+import tableDataCheck from "Components/ReUsableComponents/tableDataCheck";
 
 const Home = () => {
   useEffect(() => {
@@ -37,26 +38,26 @@ const Home = () => {
   const { data, loading, error } = useSelector(
     (state: RootState) => state.table
   );
-  const { complex = [], check = [], daily = [] }: any = data || {};
-  console.log(daily);
-  useEffect(() => {
-    const fetchData = async () => {
-      dispatch(setLoading(true));
-      try {
-        const response = await axios.get<any[]>("http://localhost:3001/multi");
-        dispatch(setData(response.data));
-      } catch (error: any) {
-        dispatch(setError(error.message));
-      } finally {
-        dispatch(setLoading(false));
-      }
-    };
+  // const { complex = [], check = [], daily = [] }: any = data || {};
+  // console.log(daily);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     dispatch(setLoading(true));
+  //     try {
+  //       const response = await axios.get<any[]>("http://localhost:3001/multi");
+  //       dispatch(setData(response.data));
+  //     } catch (error: any) {
+  //       dispatch(setError(error.message));
+  //     } finally {
+  //       dispatch(setLoading(false));
+  //     }
+  //   };
 
-    fetchData();
-  }, [dispatch]);
+  //   fetchData();
+  // }, [dispatch]);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error}</div>;
   console.log(data);
   return (
     <>
@@ -217,7 +218,7 @@ const Home = () => {
           <WeeklyRevenue />
         </Grid>
         <Grid item xl={6} md={6} lg={6} xs={12} sx={{ maxheight: "20vh" }}>
-          <Check tableData={check} />
+          <Check tableData={tableDataCheck} />
         </Grid>
         <Grid item xl={3} md={3} lg={3} xs={12}>
           <DailyTraffic />

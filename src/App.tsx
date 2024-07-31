@@ -8,13 +8,16 @@ import {
 } from "react-router-dom";
 
 import { Layout } from "./Components/Layout/Layout";
-import { lazy, Suspense } from "react";
+import { lazy} from "react";
 import ErrorBoundary from "Components/ErrorBoundary/Error";
+import Home from "Components/Home/Home";
+import Contact from "Components/Contact/Contact";
 
-const Home = lazy(() => import("./Components/Home/Home"));
+
+// const Home = lazy(() => import("./Components/Home/Home"));
 
 
-const Contact = lazy(() => import("./Components/Contact/Contact"));
+// const Contact = lazy(() => import("./Components/Contact/Contact"));
 
 const App = () => {
   const theme = createTheme({
@@ -26,8 +29,8 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <ErrorBoundary>
-          <Suspense fallback={<div>Loading...</div>}>
+        {/* <ErrorBoundary> */}
+          {/* <Suspense fallback={<div>Loading...</div>}> */}
             <Routes>
               <Route
                 path="/"
@@ -40,8 +43,8 @@ const App = () => {
                 <Route path="/contacts" element={<Contact />} />
               </Route>
             </Routes>
-          </Suspense>
-        </ErrorBoundary>
+          {/* </Suspense> */}
+        {/* </ErrorBoundary> */}
       </Router>
     </ThemeProvider>
   );
