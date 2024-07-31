@@ -49,7 +49,7 @@ const HeaderLinks = (props: { secondary: boolean })=>{
         {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
       </IconButton>
 
-      <IconButton
+      <IconButton onClick={()=>alert('No notifications ')}
         color="primary"
         sx={{
           p: '5px',
@@ -60,7 +60,7 @@ const HeaderLinks = (props: { secondary: boolean })=>{
         <NotificationAddOutlined />
       </IconButton>
 
-      <IconButton
+      <IconButton  onClick={()=>alert(' Your files make up 63% of the data. ')}
         color="primary"
         sx={{
           p: '5px',

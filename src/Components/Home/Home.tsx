@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { Helmet } from "react-helmet";
 import StatCard from "../ReUsableComponents/StatCard";
@@ -21,11 +21,16 @@ import axios from "axios";
 import { setData, setError, setLoading } from "Components/store/tableSlice";
 import tableDataComplex from "Components/ReUsableComponents/tableDataComplex";
 import tableDataCheck from "Components/ReUsableComponents/tableDataCheck";
+import { useTable } from "hooks/useTable";
+
 
 const Home = () => {
+
+ 
+
   useEffect(() => {
     const handleResize = () => {
-      window.location.reload();
+       window.location.reload();
     };
 
     window.addEventListener("resize", handleResize);
@@ -38,23 +43,23 @@ const Home = () => {
   const { data, loading, error } = useSelector(
     (state: RootState) => state.table
   );
-  // const { complex = [], check = [], daily = [] }: any = data || {};
-  // console.log(daily);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     dispatch(setLoading(true));
-  //     try {
-  //       const response = await axios.get<any[]>("http://localhost:3001/multi");
-  //       dispatch(setData(response.data));
-  //     } catch (error: any) {
-  //       dispatch(setError(error.message));
-  //     } finally {
-  //       dispatch(setLoading(false));
-  //     }
-  //   };
+  const { complex = [], check = [], daily = [] }: any = data || {};
+  console.log(daily);
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch(setLoading(true));
+      try {
+        const response = await axios.get<any[]>("http://localhost:3001/multi");
+        dispatch(setData(response.data));
+      } catch (error: any) {
+        dispatch(setError(error.message));
+      } finally {
+        dispatch(setLoading(false));
+      }
+    };
 
-  //   fetchData();
-  // }, [dispatch]);
+    fetchData();
+  }, [dispatch]);
 
   // if (loading) return <div>Loading...</div>;
   // if (error) return <div>Error: {error}</div>;
@@ -207,17 +212,36 @@ const Home = () => {
             value="2935"
           />
         </Grid>
-
-        {/* UsesCases  */}
       </Grid>
-      <Grid container spacing={2} sx={{ p: 1 }}>
-        <Grid item xl={6} md={6} lg={6} xs={12} sx={{ maxheight: "20vh" }}>
+      <Grid container spacing={2} sx={{ p: 1 }} display={"flex"}>
+        <Grid
+          item
+          xl={6}
+          md={6}
+          lg={6}
+          xs={12}
+          sx={{ maxheight: "20vh", overflow: "hidden" }}
+        >
           <TotalSpent />
         </Grid>
-        <Grid item xl={6} md={6} lg={6} xs={12} sx={{ maxheight: "20vh" }}>
+        <Grid
+          item
+          xl={6}
+          md={6}
+          lg={6}
+          xs={12}
+          sx={{ maxheight: "20vh", overflow: "hidden" }}
+        >
           <WeeklyRevenue />
         </Grid>
-        <Grid item xl={6} md={6} lg={6} xs={12} sx={{ maxheight: "20vh" }}>
+        <Grid
+          item
+          xl={6}
+          md={6}
+          lg={6}
+          xs={12}
+          sx={{ maxheight: "20vh", overflow: "hidden" }}
+        >
           <Check tableData={tableDataCheck} />
         </Grid>
         <Grid item xl={3} md={3} lg={3} xs={12}>

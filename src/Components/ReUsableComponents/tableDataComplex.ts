@@ -29,6 +29,17 @@ const tableDataComplex: RowObj[] = [
 		progress: 50.5,
 		status: 'Approved',
 		date: '24 Oct 2022'
+	},{
+		name: ' Update',
+		progress: 70,
+		status: 'Error',
+		date: '13 Mar 2021'
+	},
+	{
+		name: 'Marketplace',
+		progress: 5.5,
+		status: 'Approved',
+		date: '24 Oct 2022'
 	}
 ];
 export default tableDataComplex;

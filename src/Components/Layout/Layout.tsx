@@ -34,6 +34,7 @@ export const Layout = () => {
           height: "100vh",
           display: "flex",
           flexDirection: "column",
+          boxSizing:'border-box'
         }}
       >
         <Box

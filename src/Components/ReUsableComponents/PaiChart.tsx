@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Card, CardContent, Typography, Select, MenuItem, useTheme, Divider, Stack } from '@mui/material';
 import PieChart from 'Components/charts/PieChart';
 import { pieChartData, pieChartOptions } from './charts';
@@ -7,7 +7,29 @@ import { pieChartData, pieChartOptions } from './charts';
 
 export default function Conversion(props: { [x: string]: any }) {
   const { ...rest } = props;
+  const [chartData, setChartData] = useState([63, 25, 12]);
 
+  // Function to handle changes in the Select component
+  const handleSelectChange = (event:any) => {
+    const value = event.target.value;
+    let newChartData;
+
+    switch (value) {
+      case 'daily':
+        newChartData = [45, 30, 25]; 
+        break;
+      case 'monthly':
+        newChartData = [63, 25, 12]; 
+        break;
+      case 'yearly':
+        newChartData = [40, 35, 25]; 
+        break;
+      default:
+        newChartData = [63, 25, 12]; 
+    }
+
+    setChartData(newChartData);
+  };
   // Material UI theme
   const theme = useTheme();
   const textColor = theme.palette.mode === 'light' ? theme.palette.text.primary : 'white';
@@ -20,6 +42,7 @@ export default function Conversion(props: { [x: string]: any }) {
                       Your Pie Chart
                   </Typography>
                   <Select
+                   onChange={handleSelectChange}
                       defaultValue="monthly"
                       variant="outlined"
                       size="small"
@@ -33,7 +56,7 @@ export default function Conversion(props: { [x: string]: any }) {
 
               <Stack display="flex" flexDirection="column" justifyContent="center" alignItems='center' flexGrow={1}>
                   <Box sx={{ height: '350px', width: '100%' }}>
-                      <PieChart chartData={pieChartData} chartOptions={pieChartOptions} />
+                      <PieChart chartData={chartData} chartOptions={pieChartOptions} />
                       <Typography sx={{ fontSize: '0.75rem', color: 'textSecondary', fontWeight: 700, mb: '5px' }}>
                                   Your files
                               </Typography>

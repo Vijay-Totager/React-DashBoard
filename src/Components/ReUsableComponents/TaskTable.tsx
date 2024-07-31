@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Card, CardContent, Typography, IconButton, Checkbox, useTheme, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import IconBox from './IconBox';
 import { AddTask, Menu } from '@mui/icons-material';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
+import { useTable } from 'hooks/useTable';
 
 export default function Conversion(props: { [x: string]: any }) {
   const { ...rest } = props;
@@ -11,21 +12,25 @@ export default function Conversion(props: { [x: string]: any }) {
   const theme = useTheme();
   const textColor = theme.palette.text.primary;
   const boxBg = theme.palette.background.paper;
-
+  const { getTask } = useTable();
+  const [tableData,setTableData]=useState([])
+  useEffect(() => {
+    const fetchData = async () => {
+      const table = await getTask();
+      if (table) setTableData(table);
+    };
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  console.log(tableData)
 
   // State to manage tasks
-  const [tasks, setTasks] = useState([
-    { label: 'Landing Page Design', checked: false },
-    { label: 'Dashboard Builder', checked: true },
-    { label: 'Mobile App Design', checked: true },
-    { label: 'Illustrations', checked: false },
-    { label: 'Promotional LP', checked: true }
-  ]);
+ 
 
   const handleCheckboxChange = (index: number) => {
-    const newTasks = [...tasks];
-    newTasks[index].checked = !newTasks[index].checked;
-    setTasks(newTasks);
+    const newTasks = [...tableData];  
+    newTasks[index].completed = !newTasks[index].completed;
+    setTableData(newTasks);
   };
 
   return (
@@ -47,12 +52,12 @@ export default function Conversion(props: { [x: string]: any }) {
         </Box>
         <Box px={1} width="100%">
           <List>
-            {tasks.map((task, index) => (
+            {tableData.map((task, index) => (
               <ListItem key={index} style={{ padding: 0 }}>
                 <ListItemIcon>
                   <Checkbox
                     edge="start"
-                    checked={task.checked}
+                    checked={task.completed}
                     onChange={() => handleCheckboxChange(index)}
                     tabIndex={-1}
                     disableRipple
@@ -64,7 +69,7 @@ export default function Conversion(props: { [x: string]: any }) {
                 <ListItemText
                   primary={
                     <Typography fontWeight="bold" color={textColor} variant="body1" sx={{fontSize:'14px'}}>
-                      {task.label}
+                      {task.title.length > 20 ? `${task.title.substring(0, 20)}...` : task.title}
                     </Typography>
                   }
                 />
