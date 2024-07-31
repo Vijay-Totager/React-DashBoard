@@ -21,7 +21,7 @@ export const Layout = () => {
           zIndex: 1,
           backgroundColor: "background.paper",
         }}
-        display={{ xs: "block", xl: "block",md:'block',lg:'block' }}
+        display={{ xs: "none", xl: "block",md:'none',lg:'block',sm:'none' }}
       >
         <MainSideBar />
       </Grid>

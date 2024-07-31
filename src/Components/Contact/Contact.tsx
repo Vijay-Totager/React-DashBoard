@@ -59,10 +59,10 @@ const Contact = () => {
                         alignContent: "center",
                         justifyContent: "center",
                         alignItems: "center",
-                        height: { xs: "fit-content", md: "150vh" },
+                        height: { xs: "fit-content", md: "fit-content" },
                         pt: 5,
                         pb: 10,
-                        mt: -12,
+                      
                         backgroundColor: theme.palette.background.default,
                     }}
                 >

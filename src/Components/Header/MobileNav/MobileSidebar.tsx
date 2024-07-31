@@ -17,8 +17,8 @@ import ClearIcon from "@mui/icons-material/Clear";
 
 const menuItems = [
   {
-    label: " Main Dashboard",
-    value: "Main Dashboard",
+    label: "Dashboard",
+    value: "Dashboard",
     dropdown: false,
     navigate: "/home",
     icon: <HomeIcon />,
@@ -187,7 +187,7 @@ export default function MobileSideBar() {
             onClick={toggleDrawer(anchor, true)}
             sx={{
               backgroundColor: "white",
-              ml: 9,
+             ml:{xs:5,md:15},
               borderRadius: "30px",
               border: "1px solid #515151 ",
             }}

@@ -65,7 +65,7 @@ const Home = () => {
         <Grid item xs={12} sx={{ display: { xl: "none" }, width: "100vw" }}>
           <Links secondary={true} />
         </Grid>
-        <Grid item xl={2} xs={12} lg={2} md={2}>
+        <Grid item xl={2} xs={12} lg={2} md={12} sm={12}>
           <StatCard
             startContent={
               <Box
@@ -88,7 +88,7 @@ const Home = () => {
             value="$350.4"
           />
         </Grid>
-        <Grid item xl={2} xs={12} lg={2} md={2}>
+        <Grid item xl={2} xs={12} lg={2} md={12} sm={12}>
           <StatCard
             startContent={
               <Box
@@ -111,7 +111,7 @@ const Home = () => {
             value="$682.5"
           />
         </Grid>
-        <Grid item xl={2} xs={12} lg={2} md={2}>
+        <Grid item xl={2} xs={12} lg={2} md={12} sm={12}>
           <StatCard
             startContent={
               <Box
@@ -134,7 +134,7 @@ const Home = () => {
             value="$574.34"
           />
         </Grid>
-        <Grid item xl={2} xs={12} lg={2} md={2}>
+        <Grid item xl={2} xs={12} lg={2} md={12} sm={12}>
           <StatCard
             startContent={
               <Box
@@ -157,7 +157,7 @@ const Home = () => {
             value="$1000"
           />
         </Grid>
-        <Grid item xl={2} xs={12} lg={2} md={2}>
+        <Grid item xl={2} xs={12} lg={2} md={12} sm={12}>
           <StatCard
             startContent={
               <Box
@@ -180,7 +180,7 @@ const Home = () => {
             value="154"
           />
         </Grid>
-        <Grid item xl={2} xs={12} lg={2} md={2}>
+        <Grid item xl={2} xs={12} lg={2} md={12} sm={12}>
           <StatCard
             startContent={
               <Box
@@ -204,11 +204,11 @@ const Home = () => {
           />
         </Grid>
       </Grid>
-      <Grid container spacing={2} sx={{ p: 1,xs:{m:1} }} display={"flex"}>
+      <Grid container spacing={2} sx={{ p: 1, }} display={"flex"}>
         <Grid
           item
           xl={6}
-          md={6}
+          md={12}
           lg={6}
           xs={12}
           sx={{ maxheight: "20vh", overflow: "hidden" }}
@@ -218,7 +218,7 @@ const Home = () => {
         <Grid
           item
           xl={6}
-          md={6}
+          md={12}
           lg={6}
           xs={12}
           sx={{ maxheight: "20vh", overflow: "hidden" }}
@@ -228,26 +228,26 @@ const Home = () => {
         <Grid
           item
           xl={6}
-          md={6}
+          md={12}
           lg={6}
           xs={12}
           sx={{ maxheight: "20vh", overflow: "hidden" }}
         >
           <Check tableData={tableDataCheck} />
         </Grid>
-        <Grid item xl={3} md={3} lg={3} xs={12}>
+        <Grid item xl={3} md={12} lg={3} xs={12}>
           <DailyTraffic />
         </Grid>
-        <Grid item xl={3} md={3} lg={3} xs={12}>
+        <Grid item xl={3} md={12} lg={3} xs={12}>
           <PaiChart />
         </Grid>
-        <Grid item xl={6} lg={6} md={6} xs={12}>
+        <Grid item xl={6} lg={6} md={12} xs={12}>
           <ProgressTable tableData={tableDataComplex} />
         </Grid>
-        <Grid item xl={3} md={3} lg={3} xs={12}>
+        <Grid item xl={3} md={12} lg={3} xs={12}>
           <TaskTable />
         </Grid>
-        <Grid item xl={3} md={3} lg={3} xs={12}>
+        <Grid item xl={3} md={12} lg={3} xs={12}>
           <Calender selectRange={false} />
         </Grid>
       </Grid>

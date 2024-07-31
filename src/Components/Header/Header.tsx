@@ -38,14 +38,14 @@ const Header = () => {
             alt=""
             sx={{
               width: "50%",
-              display: { xs: "block", sm: "block", md: "none" },
+              display: { xs: "block", sm: "block", md: "block" ,lg:'none',xl:'none'},
             }}
           />
 
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "flex", md: "flex",lg:'none',xl:'none' },
               justifyContent: "flex-end",
             }}
           >
@@ -54,7 +54,7 @@ const Header = () => {
 
          
 
-          <Stack sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'Start' } }}>
+          <Stack sx={{ flexGrow: 1, display: { xs: 'none', md: 'none',xl:'block', justifyContent: 'Start' } }}>
             <Stack>
               <Breadcrumbs aria-label="breadcrumb">
                 <Link underline="hover" color="inherit" href="/">
