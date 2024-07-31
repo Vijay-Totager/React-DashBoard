@@ -204,7 +204,7 @@ const Home = () => {
           />
         </Grid>
       </Grid>
-      <Grid container spacing={2} sx={{ p: 1 }} display={"flex"}>
+      <Grid container spacing={2} sx={{ p: 1,xs:{m:1} }} display={"flex"}>
         <Grid
           item
           xl={6}
